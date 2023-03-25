@@ -1,0 +1,38 @@
+{
+  "name": "opensource-api",
+  "version": "1.11.0",
+  "description": "A free and public Open Source API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "format": "prettier --write .",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prepare": "husky install",
+    "test": "mocha test/**/*.test.js --exit",
+    "env": "cp .env.example .env"
+  },
+  "author": "Pradumna Saraf",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongodb": "^4.7.0",
+    "mongoose": "^6.3.6"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "chai-http": "^4.3.0",
+    "eslint": "^8.23.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.3",
+    "mocha": "^10.2.0",
+    "nodemon": "^2.0.16",
+    "prettier": "2.7.1"
+  },
+  "lint-staged": {
+    "*.{js,md}": "prettier --write",
+    "*.js": "eslint --fix"
+  }
+}
